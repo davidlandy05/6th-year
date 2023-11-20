@@ -1,0 +1,4 @@
+MyFloatValue=9.82
+c=MyFloatValue
+String=str(c)
+print(type(String))

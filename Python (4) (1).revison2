@@ -1,0 +1,73 @@
+#1.
+
+MyFloatValue=9.82
+c=MyFloatValue
+String=str(c)
+print(type(String))
+"""
+ABC=abc
+String=int(ABC)
+print(type(ABC))
+"""
+#2.
+
+year = int(input("Enter the current year"))#Added int
+age = int(input("What age will you be at the end of this year?")) #  Note the int() cast on the input 
+print("You were born in", year-age)
+#Unsupported operand type for string and integer
+
+#The first one will give an error as you need to convert the integer to a string to add them
+
+#3.
+
+Mars=1*5
+Coke=1.50*4
+Crisps=0.80*3
+Tea=2*2
+Slice=1*3.50
+Bill=Mars+Coke+Crisps+Tea+Slice
+print(Bill)
+
+#4
+
+number1= int(input("Enter the first number:"))
+number2= input("Enter second number:")
+number2= int(number2)
+sum= number1+number2
+print(number1,"+",number2,"=",sum)
+
+#5
+
+F=int(input("Enter your temperature in Fahrenheit"))
+S=F-32
+C=float(S)
+Centigrade=C*0.555555556
+print(Centigrade)
+
+#6
+
+dd=int(input("Enter the date of month: "))
+mm=int(input("Enter the shifted month: "))
+m=mm+1
+Mm=m*13
+M=Mm/5
+Month=int(M)
+y=int(input("Enter last two digits of the year"))
+divide1=y/4
+Divide1=int(divide1)
+c=int(input("the first two digit of the year"))
+divide2=c/4
+Divide2=int(divide2)
+mutiply1=2*c
+Mutiply1=int(mutiply1)
+
+w=dd+Month+y+Divide1+Divide2-Mutiply1
+W=w%7
+print(W)
+
+
+
+
+
+
+
