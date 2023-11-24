@@ -6,12 +6,12 @@ from firebase_admin import db
 
 ser=serial.Serial()
 ser.buadrate = 115200
-ser.port = "COM5"
+ser.port = "COM4"
 ser.open()
 
 
-cred=credentials.Certifacate("C:/Users/18DLandy.ACC/Downloads/test-f4bef-firebase-adminsdk-op3ae-3b6ce776cf.json")
-databaseURL: "https://test-f4bef-default-rtdb.europe-west1.firebasedatabase.app"
+cred=credentials.Certificate("C:/Users/18DLandy.ACC/Downloads/test-f4bef-firebase-adminsdk-op3ae-43b882ee7c.json")
+firebase_admin.initialize_app(cred)reference
 
 ref= db.reference()
 ref.update({'temperature_log'})
@@ -24,11 +24,11 @@ while True:
     mb_temperature = str(ser.readline().decide('utf-8'))
     mb_temperature = mb_temperature.replace(" ","")
     mb_temperature = mb_temperature.replace("\r\m","")
-    
+    mb_temperature = str(ser.readline().decide('utf-8'))
     if mb_temperature.isdigit():
         ref.update({"Reading" + str(i):{'Temperature':mb_temperature, 'Location':source}})
         i = i+1
-    
+
         
                          
                    
